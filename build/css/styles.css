@@ -1,0 +1,330 @@
+:root {
+    --col-dark: #020122;
+    --col-dark-transp: rgba(0, 0, 0, 0.652);
+    --col-white: #ffff;
+    --col-middle: #798071;
+    --col-bright: #296eb4;
+    --col-attention: #92140c;
+    --col-attention-active: #c0190d;
+}
+
+#nav-bar {
+    background-color: var(--col-dark);
+    color: var(--col-white);
+    height: 3.5em;
+}
+#nav-bar h1 {
+    -webkit-margin-before: 0px;
+            margin-block-start: 0px;
+    -webkit-margin-after: 0px;
+            margin-block-end: 0px;
+}
+
+#content-wrapper {
+    min-height: 100vh;
+}
+
+#upcoming > div {
+    background-color: #dcd5d5;
+}
+#movies-carousel {
+    border-right: var(--col-white) solid 2px;
+}
+
+/* Details Collapse General */
+#info-collapse {
+    z-index: 10;
+    background-color: rgb(255, 255, 255);
+}
+
+.btn-back {
+    font-weight: 400;
+    background-color: var(--col-attention);
+    color: var(--col-white);
+    box-shadow: #000 1px 1px 3px;
+}
+.btn-back:hover {
+    background-color: var(--col-attention-active);
+    color: var(--col-white);
+}
+.btn-back:active {
+    background-color: var(--col-attention) !important;
+    color: var(--col-white) !important;
+}
+
+/* Carousels */
+#movies-carousel .carousel-control-prev,
+#movies-carousel .carousel-control-next {
+    width: 12.5%;
+    color: var(--col-dark);
+    font-size: 2em;
+}
+
+#movies-carousel .carousel-control-prev:focus,
+#movies-carousel .carousel-control-next:focus {
+    text-decoration: none;
+    outline: 0;
+    opacity: 0.5;
+}
+
+/* Details - Movies */
+#original-title {
+    font-weight: lighter;
+}
+
+#rating-wrapper {
+    background-color: var(--col-dark);
+    color: var(--col-white);
+    height: 75px;
+    width: 75px;
+    left: 100%;
+    transform: translate(-100%);
+    box-shadow: var(--col-dark) 1px 1px 5px;
+}
+#rating-wrapper > i {
+    z-index: -1;
+    font-size: 71px;
+    line-height: 0px;
+}
+#rating-wrapper > i::before {
+    vertical-align: 0.5em;
+}
+
+#rating {
+    -webkit-margin-after: 0px;
+            margin-block-end: 0px;
+}
+
+ul {
+    list-style-type: none;
+    -webkit-padding-start: 0;
+            padding-inline-start: 0;
+}
+
+@media (max-width: 991.5px) {
+    #movie-credits > li:nth-child(odd),
+    #actor-credits > li:nth-child(odd) {
+        background-color: #eeeeee;
+    }
+}
+@media (min-width: 992px) {
+    #movie-credits > li:nth-child(odd),
+    #actor-credits > li:nth-child(odd) {
+        border-right: var(--col-middle) solid 2px;
+    }
+    #movie-credits > li:nth-child(4n - 1),
+    #movie-credits > li:nth-child(4n),
+    #actor-credits > li:nth-child(4n - 1),
+    #actor-credits > li:nth-child(4n) {
+        background-color: #eeeeee;
+    }
+}
+
+.cast-credit {
+    padding-bottom: 0.2rem;
+}
+
+#reviews .page-item {
+    cursor: pointer;
+}
+#reviews .page-item.disabled,
+#reviews .page-item.active {
+    cursor: auto;
+    pointer-events: none;
+}
+
+.review-info {
+    display: flex;
+    align-items: center;
+}
+
+.page-set {
+    display: none;
+}
+.page-set.active {
+    display: flex;
+}
+
+#reviews ul.pagination > div.page-set > .page-item > a {
+    border-radius: 0px !important;
+}
+
+.line-clamp {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin: 0;
+    margin-block: 0;
+}
+
+#current-review .card-text.line-clamp {
+    -webkit-line-clamp: 3;
+}
+
+#movie-credits.box-clamp {
+    overflow: hidden;
+    max-height: 350px;
+    -webkit-mask-image: linear-gradient(to top, transparent 10%, black 50%);
+    mask-image: linear-gradient(to top, transparent 10%, black 50%);
+}
+#actor-credits.box-clamp {
+    overflow: hidden;
+    max-height: 300px;
+    -webkit-mask-image: linear-gradient(to top, transparent 0%, black 30%);
+    mask-image: linear-gradient(to top, transparent 0%, black 30%);
+}
+
+.show-clamp {
+    -webkit-line-clamp: unset !important;
+    overflow: hidden !important;
+    max-height: none !important;
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
+}
+
+.clamp-toggle {
+    cursor: pointer;
+    color: #296eb4;
+}
+.clamp-toggle:hover {
+    color: #1f5891;
+}
+
+.avatar {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 75px;
+    height: 75px;
+    box-shadow: var(--col-middle) 1px 1px 3px;
+}
+
+/* Details - Actors */
+#name {
+    -webkit-margin-after: 0px;
+            margin-block-end: 0px;
+    margin-top: 0.375rem;
+}
+
+#bio {
+    -webkit-margin-after: 0;
+            margin-block-end: 0;
+}
+
+#bio-src {
+    margin: 0px;
+    font-style: italic;
+    font-size: 0.85em;
+}
+
+/* Misc */
+.carousel-item img,
+#top-ten .card-img {
+    cursor: pointer;
+}
+
+footer h5 {
+    -webkit-margin-after: 0px;
+            margin-block-end: 0px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.dark-bg-transp {
+    background-color: var(--col-dark-transp);
+}
+
+/* Multi-Slide Movie Carousel */
+@media (max-width: 767.5px) {
+    #movies-carousel .carousel-item > div {
+        display: none;
+    }
+    #movies-carousel .carousel-item > div:first-child {
+        display: block;
+    }
+
+    #upcoming {
+        background-color: #dcd5d5;
+    }
+}
+
+#movies-carousel .carousel-item.active,
+#movies-carousel .carousel-item-next,
+#movies-carousel .carousel-item-prev {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#movies-carousel .carousel-inner {
+    width: 80%;
+    margin: auto;
+}
+
+@media (min-width: 768px) {
+    #movies-carousel .carousel-item-end.active,
+    #movies-carousel .carousel-item-next {
+        transform: translateX(33%);
+    }
+
+    #movies-carousel .carousel-item-start.active,
+    #movies-carousel .carousel-item-prev {
+        transform: translateX(-33%);
+    }
+
+    #movies-carousel .carousel-item > div {
+        width: 30% !important;
+    }
+
+    #movies-carousel .carousel-item-end,
+    #movies-carousel .carousel-item-start {
+        transform: translateX(0);
+    }
+
+    #actors-carousel .actor > img {
+        width: 75%;
+    }
+}
+/* End Multi-Slide Movie Carousel */
+
+@media (max-width: 1199px) {
+    #rating-wrapper {
+        height: 65px;
+        width: 65px;
+        transform: translate(-85%);
+    }
+    #rating-wrapper > i {
+        font-size: 61px;
+    }
+}
+
+@media (max-width: 576px) {
+    .btn-back {
+        position: fixed !important;
+        top: 1rem;
+        z-index: 1001;
+    }
+
+    #rating-wrapper {
+        transform: translate(-150%);
+    }
+
+    .avatar {
+        width: 50px;
+        height: 50px;
+    }
+
+    #actors-carousel .actor > img {
+        width: 75%;
+    }
+}
+
+@media (max-width: 499px) {
+    #reviews div.page-set {
+        display: none;
+    }
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,7 +1,5 @@
 'use strict'
 
-$(document).ready(init())
-
 function init() {
     const API = {}
     const APIRequest = retrieveAPIKeys()
