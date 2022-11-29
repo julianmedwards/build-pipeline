@@ -8,9 +8,6 @@ import image from "gulp-image";
 import mocha from "gulp-mocha";
 
 function autoprefix() {
-    // const postcss = require("gulp-postcss");
-    // const autoprefixer = require("autoprefixer");
-    // const sourcemaps = require("gulp-sourcemaps");
     return g
         .src("dev/css/styles.css")
         .pipe(sourcemaps.init())
@@ -20,8 +17,6 @@ function autoprefix() {
 }
 
 function minifyCSS() {
-    // const cleanCSS = require("gulp-clean-css");
-    // const sourcemaps = require("gulp-sourcemaps");
     return g
         .src("build/css/styles.css")
         .pipe(sourcemaps.init())
@@ -33,7 +28,6 @@ function minifyCSS() {
 // Apply global prettier to HTML
 // Minor change to show difference from personal Prettier settings.
 function prettierHTML() {
-    // const prettier = require("gulp-prettier");
     return g
         .src("dev/index.html")
         .pipe(prettier({ bracketSameLine: true }))
